@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Tumanji.Data;
 using Tumanji.Models;
 
 namespace Tumanji.Controllers
@@ -7,15 +8,17 @@ namespace Tumanji.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _db;
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext db)
         {
+            _db = db;
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<UserEntity> User = _db.User.ToList();
+            return View(User);
         }
 
         public IActionResult Privacy()
