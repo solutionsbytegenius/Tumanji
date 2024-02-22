@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NvQ8qOb9T1f/URM3WD9CFqrN1pBFMmHlpOSzYPs6VvM=",
+  "Hash": "/8jXOPAPrSxmftmt4fq7W4e4+iWGNch507Daa3ZIwS0=",
   "Source": "Tumanji",
   "BasePath": "_content/Tumanji",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Logo\\logo.png",
+      "SourceId": "Tumanji",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\",
+      "BasePath": "_content/Tumanji",
+      "RelativePath": "Images/Logo/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Logo\\logo.png"
     },
     {
       "Identity": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\js\\site.js",

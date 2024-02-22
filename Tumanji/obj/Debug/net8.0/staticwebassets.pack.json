@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Tumanji.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Logo\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\Logo\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

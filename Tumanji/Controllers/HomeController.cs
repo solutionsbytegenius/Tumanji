@@ -17,13 +17,24 @@ namespace Tumanji.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<UserEntity> User = _db.User.ToList();
-            return View(User);
+            IEnumerable<NewsEntity> News = _db.News.ToList();
+            return View(News);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Contatti()
         {
             return View();
+        }
+        public IActionResult Menu()
+        {
+            IEnumerable<PaninoEntity> Panino = _db.Panino.ToList();
+            return View(Panino);
+        }
+
+        public IActionResult Carrello()
+        {
+            IEnumerable<OrdineEntity> Ordine = _db.Ordine.ToList();
+            return View(Ordine);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
