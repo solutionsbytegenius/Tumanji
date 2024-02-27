@@ -20,6 +20,11 @@ namespace Tumanji.Controllers
             IEnumerable<NewsEntity> News = _db.News.ToList();
             return View(News);
         }
+        public IActionResult Login()
+        {
+            IEnumerable<UserEntity> User = _db.User.ToList();
+            return View(User);
+        }
 
         public IActionResult Contatti()
         {
