@@ -4,11 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Tumanji</title>
+    <link rel="icon" href="~/Images/favicon.ico" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Tumanji.styles.css" asp-append-version="true" />
+    <style>
+        #Body{
+            background: url("/Images/sfondo.jpg") no-repeat center center;
+            background-size : cover;
+        }
+    </style>
 </head>
-<body>
+<body id="Body">
     <header>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-3">
             <div class="container-fluid">
@@ -38,13 +45,16 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div  class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer class=" footer text-muted">
         <div class="mt-5 p-4 bg-dark text-white text-center">
             &copy; 2024 - Tumanji - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
