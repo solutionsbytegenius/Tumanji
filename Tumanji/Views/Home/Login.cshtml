@@ -18,7 +18,7 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <main class="form-signin">
-                <form method="post" action="@Url.Action("Index")">
+                <form method="post">
 
                     <div class="form-floating">
                         <input type="text" class="form-control" id="Username" placeholder="Username" wfd-id="id0" required>
@@ -30,7 +30,7 @@
                         <label for="floatingPassword">Password</label>
                     </div>
                     <br />
-                    <button class="w-100 btn btn-lg btn-primary" id="Login" type="submit">Accedi</button>
+                    <button class="w-100 btn btn-lg btn-primary" id="Login" type="submit" asp-controller="Home" asp-action="Login">Accedi</button>
                 </form>
             </main>
         </div>

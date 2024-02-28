@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
 using Tumanji.Data;
 using Tumanji.Models;
+
 
 namespace Tumanji.Controllers
 {
@@ -22,10 +24,35 @@ namespace Tumanji.Controllers
         }
         public IActionResult Login()
         {
-            IEnumerable<UserEntity> User = _db.User.ToList();
-            return View(User);
+            return View();
         }
 
+        [HttpPost]
+        public IActionResult Login(UserEntity u)
+        {
+            IEnumerable<UserEntity> User = _db.User.ToList();
+            if (Request.RouteValues.GetValueOrDefault("Login") != null)
+            {
+                var username = Request.RouteValues.GetValueOrDefault("UserName")?.ToString();
+                var password = Request.RouteValues.GetValueOrDefault("Password")?.ToString();
+                var UserLog = User.FirstOrDefault(x => x.UserName == username && x.Password == password);
+                if (UserLog != null)
+                {
+                    HttpContext.Session.SetString("UserID", UserLog.UserID.ToString());
+                    HttpContext.Session.SetString("UserName", UserLog.UserName);
+                    return Redirect("Index");
+                }
+            }
+
+            return View();
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("UserID");
+            HttpContext.Session.Remove("UserName");
+            HttpContext.Session.Clear();
+            return Redirect("Index");
+        }
         public IActionResult Contatti()
         {
             return View();

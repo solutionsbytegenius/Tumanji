@@ -5,6 +5,9 @@ namespace Tumanji.Data
 {
     public class ApplicationDbContext : DbContext
     {
+        public ApplicationDbContext() 
+        {
+        }
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
