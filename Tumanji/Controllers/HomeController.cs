@@ -26,51 +26,58 @@ namespace Tumanji.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            return View();
+            if (String.IsNullOrEmpty(HttpContext?.Session.GetString("UserID")))
+            {
+                return View();
+            }
+            else
+            {
+                return View("Index");
+            }
         }
 
         [HttpPost]
-        public IActionResult Verify(Account A)
-        {
-            IEnumerable<UserEntity> User = _db.User.ToList();
+public IActionResult Verify(Account A)
+{
+    IEnumerable<UserEntity> User = _db.User.ToList();
 
-            var UserLog = User.FirstOrDefault(x => x.UserName == A.Username && x.Password == A.Password);
-            if (UserLog != null)
-            {
-                HttpContext.Session.SetString("UserID", UserLog.UserID.ToString());
-                HttpContext.Session.SetString("UserName", UserLog.UserName);
-                return View("Index");
-            }
+    var UserLog = User.FirstOrDefault(x => x.UserName == A.Username && x.Password == A.Password);
+    if (UserLog != null)
+    {
+        HttpContext.Session.SetString("UserID", UserLog.UserID.ToString());
+        HttpContext.Session.SetString("UserName", UserLog.UserName);
+        return View("Index");
+    }
 
-            return View("Login");
-        }
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Remove("UserID");
-            HttpContext.Session.Remove("UserName");
-            HttpContext.Session.Clear();
-            return Redirect("Index");
-        }
-        public IActionResult Contatti()
-        {
-            return View();
-        }
-        public IActionResult Menu()
-        {
-            IEnumerable<PaninoEntity> Panino = _db.Panino.ToList();
-            return View(Panino);
-        }
+    return View("Login");
+}
+public IActionResult Logout()
+{
+    HttpContext.Session.Remove("UserID");
+    HttpContext.Session.Remove("UserName");
+    HttpContext.Session.Clear();
+    return Redirect("Index");
+}
+public IActionResult Contatti()
+{
+    return View();
+}
+public IActionResult Menu()
+{
+    IEnumerable<PaninoEntity> Panino = _db.Panino.ToList();
+    return View(Panino);
+}
 
-        public IActionResult Carrello()
-        {
-            IEnumerable<OrdineEntity> Ordine = _db.Ordine.ToList();
-            return View(Ordine);
-        }
+public IActionResult Carrello()
+{
+    IEnumerable<OrdineEntity> Ordine = _db.Ordine.ToList();
+    return View(Ordine);
+}
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+public IActionResult Error()
+{
+    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+}
     }
 }
