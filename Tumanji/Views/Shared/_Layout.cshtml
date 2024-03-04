@@ -1,4 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Http
+@using System.Web.Optimization
+@using System.Web
 @inject IHttpContextAccessor Accessor
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +20,7 @@
     </style>
 </head>
 <body id="Body">
+    
     <header>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-3">
             <div class="container-fluid">
@@ -34,13 +37,34 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-home" aria-hidden="false"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Contatti"><i class="fa fa-phone" aria-hidden="true"></i> Contatti</a>
+                            @if (String.IsNullOrEmpty(@Accessor.HttpContext?.Session.GetString("UserID")))
+                            {
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Contatti"><i class="fa fa-phone" aria-hidden="true"></i> Contatti</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="News"><i class="fa fa-phone" aria-hidden="true"></i> Notizie</a>
+                            }
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Menu"><i class="fa fa-cutlery" aria-hidden="true"></i> Menù</a>
+                            @if (String.IsNullOrEmpty(@Accessor.HttpContext?.Session.GetString("UserID")))
+                            {
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Menu"><i class="fa fa-cutlery" aria-hidden="true"></i> Menù</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="EditMenu"><i class="fa fa-cutlery" aria-hidden="true"></i> Modifica Menù</a>
+                            }
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Carrello"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrello</a>
+                            @if (String.IsNullOrEmpty(@Accessor.HttpContext?.Session.GetString("UserID")))
+                            {
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Carrello"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrello</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Ordini"><i class="fa fa-home" aria-hidden="true"></i>Ordinazioni</a>
+                            }
                         </li>
                     </ul>
                     <ul class="navbar-nav flex-grow-2">

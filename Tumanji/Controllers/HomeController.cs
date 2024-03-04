@@ -22,29 +22,34 @@ namespace Tumanji.Controllers
             IEnumerable<NewsEntity> News = _db.News.ToList();
             return View(News);
         }
+
+        [HttpGet]
         public IActionResult Login()
         {
-            return View();
+            if (String.IsNullOrEmpty(HttpContext?.Session.GetString("UserID")))
+            {
+                return View();
+            }
+            else
+            {
+                return View("Index");
+            }
         }
 
         [HttpPost]
-        public IActionResult Login(UserEntity u)
+        public IActionResult Verify(AccountPipe A)
         {
             IEnumerable<UserEntity> User = _db.User.ToList();
-            if (Request.RouteValues.GetValueOrDefault("Login") != null)
+
+            var UserLog = User.FirstOrDefault(x => x.UserName == A.Username && x.Password == A.Password);
+            if (UserLog != null)
             {
-                var username = Request.RouteValues.GetValueOrDefault("UserName")?.ToString();
-                var password = Request.RouteValues.GetValueOrDefault("Password")?.ToString();
-                var UserLog = User.FirstOrDefault(x => x.UserName == username && x.Password == password);
-                if (UserLog != null)
-                {
-                    HttpContext.Session.SetString("UserID", UserLog.UserID.ToString());
-                    HttpContext.Session.SetString("UserName", UserLog.UserName);
-                    return Redirect("Index");
-                }
+                HttpContext.Session.SetString("UserID", UserLog.UserID.ToString());
+                HttpContext.Session.SetString("UserName", UserLog.UserName);
+                return View("Index");
             }
 
-            return View();
+            return View("Login");
         }
         public IActionResult Logout()
         {
@@ -61,6 +66,20 @@ namespace Tumanji.Controllers
         {
             IEnumerable<PaninoEntity> Panino = _db.Panino.ToList();
             return View(Panino);
+        }
+
+        public IActionResult EditMenu()
+        {
+            IEnumerable<PaninoEntity> Panino = _db.Panino.ToList();
+            
+            if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("UserID")))
+            {
+                return View(Panino);
+            }
+            else
+            {
+                return View("Index");
+            }
         }
 
         public IActionResult Carrello()
