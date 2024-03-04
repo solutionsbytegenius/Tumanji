@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Modifica Menù";
+}
+<div class="Container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <center>
+                <img src="/Images/Menu.svg" class="w-50 h-50" />
+            </center>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="table-responsive ">
+            <table class="table table-striped table-light">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrizione</th>
+                        <th>Prezzo (€)</th>
+                        <th>Panino del Mese</th>
+                        <th>In Menù</th>
+                        <th>Data di Creazione</th>
+                        <th><button class="btn-success">+</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.Nome</td>
+                            <td>@x.Descrizione</td>
+                            <td>€ @x.Prezzo</td>
+                            <td>@if (x.PaninoMese == true)
+                                {
+                                    <p>Panino del mese</p>
+                                }
+                                else
+                                {
+                                }
+                            </td>
+                            <td>
+                                @if (x.InMenu == true)
+                                {
+                                    <p>In menù</p>
+                                }
+                                else
+                                {
+                                    <p>Non in menù</p>
+                                }
+                            </td>
+                            <td>
+                                @x.DataCreazione
+                            </td>
+                            <td>
+                                <button class="btn-success"><i class="fa-solid fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
