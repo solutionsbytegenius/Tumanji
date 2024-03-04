@@ -37,7 +37,7 @@ namespace Tumanji.Controllers
         }
 
         [HttpPost]
-public IActionResult Verify(Account A)
+public IActionResult Verify(AccountPipe A)
 {
     IEnumerable<UserEntity> User = _db.User.ToList();
 

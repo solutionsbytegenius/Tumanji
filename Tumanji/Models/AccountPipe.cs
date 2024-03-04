@@ -1,6 +1,6 @@
 ﻿namespace Tumanji.Models
 {
-    public class Account
+    public class AccountPipe
     {
         public string Username { get; set; }
 
