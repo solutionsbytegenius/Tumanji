@@ -11,7 +11,7 @@ namespace Tumanji.Models
         public DateTime DataInserimento { get; set; }
         public bool Visibile { get; set; }
         public string ImmaginePath { get; set; }
-        public DateTime ScadenzaNotizia { get; set; }
+        public DateTime? ScadenzaNotizia { get; set; }
         public bool Scaduta {  get; set; }
     }
 }

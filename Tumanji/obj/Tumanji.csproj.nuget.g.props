@@ -15,8 +15,4 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.2\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.2\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
   </ImportGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgWebGrease Condition=" '$(PkgWebGrease)' == '' ">C:\Users\nikoX\.nuget\packages\webgrease\1.1.0</PkgWebGrease>
-    <PkgFontAwesome Condition=" '$(PkgFontAwesome)' == '' ">C:\Users\nikoX\.nuget\packages\fontawesome\4.0.3</PkgFontAwesome>
-  </PropertyGroup>
 </Project>

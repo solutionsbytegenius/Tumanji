@@ -82,6 +82,21 @@ namespace Tumanji.Controllers
             }
         }
 
+        public IActionResult News()
+        {
+            IEnumerable<NewsEntity> News = _db.News.ToList();
+
+            if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("UserID")))
+            {
+                return View(News);
+            }
+            else
+            {
+                return View("Index");
+            }
+        }
+
+
         public IActionResult Carrello()
         {
             IEnumerable<OrdineEntity> Ordine = _db.Ordine.ToList();

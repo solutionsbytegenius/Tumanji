@@ -69,14 +69,3 @@ C:\Users\nikoX\source\repos\Tumanji\Tumanji\obj\Debug\net8.0\refint\Tumanji.dll
 C:\Users\nikoX\source\repos\Tumanji\Tumanji\obj\Debug\net8.0\Tumanji.pdb
 C:\Users\nikoX\source\repos\Tumanji\Tumanji\obj\Debug\net8.0\Tumanji.genruntimeconfig.cache
 C:\Users\nikoX\source\repos\Tumanji\Tumanji\obj\Debug\net8.0\ref\Tumanji.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\System.Web.Mvc.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\System.Web.Razor.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\System.Web.Optimization.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\System.Web.Helpers.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\System.Web.WebPages.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\WebActivatorEx.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\Antlr3.Runtime.dll
-C:\Users\nikoX\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\WebGrease.dll
