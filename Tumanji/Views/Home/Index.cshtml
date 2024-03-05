@@ -51,45 +51,27 @@
 <br />
 <div class="Container">
     <div class="row">
-        <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src="/Images/Logo/logo.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src="/Images/Logo/logo.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src="/Images/Logo/logo.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src="/Images/Logo/logo.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+        <div class="col-md-12 bg-light">
+            <h1>News</h1>
+            <ul class="list-unstyled ">
+                @if (Model != null)
+                {
+                    @foreach (var x in Model)
+                    {
+                        <li class="media">
+                            <img class="mr-3 w-25 h-25" src="/Images/Logo/logo.png" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1">@x.TitoloNotizia</h5>
+                                (@x.DataInserimento)
+                                <br />
+                                @x.CorpoNotizia;
+                            </div>
+                        </li>
+                        <hr />
+                    }
+                }
+               
+            </ul>
         </div>
     </div>
 </div>
