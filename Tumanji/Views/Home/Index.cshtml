@@ -53,7 +53,7 @@
     <br />
     <div class="Container">
         <div class="row">
-            <div class="col-md-12 bg-opacity-25">
+            <div class="col-md-12 bg-opacity-50">
                 <MiniTitolo>Notizie</MiniTitolo>
                 <ul class="list-unstyled ">
                     @if (Model != null)
@@ -81,5 +81,5 @@
 }
 else
 {
-    <h1>Ciao, @Accessor.HttpContext?.Session.GetString("UserName")</h1>
+    <Titolo>Ciao, @Accessor.HttpContext?.Session.GetString("UserName")</Titolo>
 }

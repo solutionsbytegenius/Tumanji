@@ -64,7 +64,7 @@ namespace Tumanji.Controllers
         }
         public IActionResult Menu()
         {
-            IEnumerable<PaninoEntity> Panino = _db.Panino.ToList();
+            IEnumerable<PaninoEntity> Panino = _db.Panino.Where(x=>x.InMenu==true).ToList();
             return View(Panino);
         }
 
