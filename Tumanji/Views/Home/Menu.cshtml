@@ -6,9 +6,28 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <center>
-                <img src="/Images/Menu.svg" class="w-50 h-50" />
+                <Titolo>Menù</Titolo>
             </center>
         </div>
         <div class="col-md-3"></div>
+    </div>
+</div>
+<br />
+
+<div class="container">
+    <div class="row">
+        @foreach (var x in Model)
+        {
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="@x.PathImage" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@x.Nome</h5>
+                        <p class="card-text">€ @x.Prezzo</p>
+                        <a href="#" class="btn btn-primary">Dettagli</a>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>

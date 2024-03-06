@@ -5,24 +5,8 @@
       "PackagePath": "staticwebassets\\Tumanji.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Carrello.svg",
-      "PackagePath": "staticwebassets\\Images\\Carrello.svg"
-    },
-    {
-      "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Contatti.svg",
-      "PackagePath": "staticwebassets\\Images\\Contatti.svg"
-    },
-    {
       "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Logo\\logo.png",
       "PackagePath": "staticwebassets\\Images\\Logo\\logo.png"
-    },
-    {
-      "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Menu.svg",
-      "PackagePath": "staticwebassets\\Images\\Menu.svg"
-    },
-    {
-      "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Notizie.svg",
-      "PackagePath": "staticwebassets\\Images\\Notizie.svg"
     },
     {
       "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Panini\\159_desktop_it.png",
@@ -37,16 +21,8 @@
       "PackagePath": "staticwebassets\\Images\\Panini\\bk.jpg"
     },
     {
-      "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Titolo.svg",
-      "PackagePath": "staticwebassets\\Images\\Titolo.svg"
-    },
-    {
       "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\favicon.ico",
       "PackagePath": "staticwebassets\\Images\\favicon.ico"
-    },
-    {
-      "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\sfondo.jpg",
-      "PackagePath": "staticwebassets\\Images\\sfondo.jpg"
     },
     {
       "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\css\\site.css",
@@ -59,6 +35,10 @@
     {
       "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\lib\\Font\\Junglelaw.ttf",
+      "PackagePath": "staticwebassets\\lib\\Font\\Junglelaw.ttf"
     },
     {
       "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\lib\\bootstrap\\LICENSE",
