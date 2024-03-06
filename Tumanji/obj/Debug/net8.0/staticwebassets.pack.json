@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\lib\\Font\\Junglelaw.ttf",
+      "PackagePath": "staticwebassets\\lib\\Font\\Junglelaw.ttf"
+    },
+    {
       "Id": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

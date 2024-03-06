@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v0SVbJrMWbLT8M1c9SALK8yLoHTVyKh1QXdvLmAVfsM=",
+  "Hash": "xME5dyOnCVDLFau2C2EYyaXVcUcBiUr8AFgKJxIyDkA=",
   "Source": "Tumanji",
   "BasePath": "_content/Tumanji",
   "Mode": "Default",
@@ -1174,6 +1174,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
+    },
+    {
+      "Identity": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\lib\\Font\\Junglelaw.ttf",
+      "SourceId": "Tumanji",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\",
+      "BasePath": "_content/Tumanji",
+      "RelativePath": "lib/Font/Junglelaw.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\Font\\Junglelaw.ttf"
     },
     {
       "Identity": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\lib\\jquery\\dist\\jquery.js",

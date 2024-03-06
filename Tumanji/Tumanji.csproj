@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Images\Panini\" />
+    <Folder Include="wwwroot\lib\Font\" />
   </ItemGroup>
 
   <ItemGroup>
