@@ -16,5 +16,6 @@ namespace Tumanji.Data
         public DbSet<PaninoEntity> Panino { get; set; }
         public DbSet<NewsEntity> News { get; set; }
         public DbSet<OrdineEntity> Ordine { get; set; }
+        public DbSet<OrarioEntity> Orario { get; set; }
     }
 }

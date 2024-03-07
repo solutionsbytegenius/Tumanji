@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
 using Tumanji.Data;
 using Tumanji.Models;
+using System.Collections.Generic;
 
 
 namespace Tumanji.Controllers
@@ -60,7 +61,8 @@ namespace Tumanji.Controllers
         }
         public IActionResult Contatti()
         {
-            return View();
+            IEnumerable<OrarioEntity> orario = _db.Orario.OrderBy(x=>x.NumeroGiorno).ToList();
+            return View(orario);
         }
         public IActionResult Menu()
         {
