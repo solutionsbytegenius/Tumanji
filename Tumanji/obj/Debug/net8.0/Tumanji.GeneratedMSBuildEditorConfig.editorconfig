@@ -9,59 +9,59 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Tumanji
 build_property.RootNamespace = Tumanji
-build_property.ProjectDir = C:\Users\nikec\source\repos\Tumanji\Tumanji\
+build_property.ProjectDir = C:\Users\nikoX\source\repos\Tumanji\Tumanji\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\nikec\source\repos\Tumanji\Tumanji
+build_property.MSBuildProjectDirectory = C:\Users\nikoX\source\repos\Tumanji\Tumanji
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/Carrello.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Home/Carrello.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJyZWxsby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/Contatti.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Home/Contatti.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YXR0aS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/EditMenu.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Home/EditMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0TWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/Index.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/Login.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/Menu.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Home/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/News.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Home/News.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Shared/Error.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/_ViewImports.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/_ViewStart.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Shared/_Layout.cshtml]
+[C:/Users/nikoX/source/repos/Tumanji/Tumanji/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yt28vgkdrw
