@@ -47,10 +47,10 @@ namespace Tumanji.Controllers
             {
                 HttpContext.Session.SetString("UserID", UserLog.UserID.ToString());
                 HttpContext.Session.SetString("UserName", UserLog.UserName);
-                return View("Index");
+                return RedirectToAction("Index");
             }
 
-            return View("Login");
+            return RedirectToAction("Login");
         }
         public IActionResult Logout()
         {
@@ -61,19 +61,20 @@ namespace Tumanji.Controllers
         }
         public IActionResult Contatti()
         {
-            IEnumerable<OrarioEntity> orario = _db.Orario.OrderBy(x=>x.NumeroGiorno).ToList();
+            IEnumerable<OrarioEntity> orario = _db.Orario.OrderBy(x => x.NumeroGiorno).ToList();
             return View(orario);
         }
+        [HttpGet]
         public IActionResult Menu()
         {
-            IEnumerable<PaninoEntity> Panino = _db.Panino.Where(x=>x.InMenu==true).ToList();
+            IEnumerable<PaninoEntity> Panino = _db.Panino.Where(x => x.InMenu == true).ToList();
             return View(Panino);
         }
 
         public IActionResult EditMenu()
         {
             IEnumerable<PaninoEntity> Panino = _db.Panino.ToList();
-            
+
             if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("UserID")))
             {
                 return View(Panino);
@@ -110,5 +111,66 @@ namespace Tumanji.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+        #region modals
+        private string[] GetNomiColonneDettagli()
+        {
+            List<string> returnDati = new List<string>();
+            returnDati.Add("Nome");
+            returnDati.Add("Descrizione");
+            returnDati.Add("Prezzo");
+            returnDati.Add("Menu +");
+            returnDati.Add("PathImage");
+            return returnDati.ToArray();
+        }
+        private string[] GetTipoColonneAnagrafica()
+        {
+            List<string> returnDati = new List<string>();
+            returnDati.Add("Testo");
+            returnDati.Add("Testo");
+            returnDati.Add("Testo");
+            returnDati.Add("Checkbox");
+            returnDati.Add("Testo");
+            return returnDati.ToArray();
+        }
+
+        [HttpPost]
+        public ActionResult ModalDetail(ModalPaninoPipe Panino)
+        {
+            try
+            {
+                Guid temp = new Guid(Panino.PaninoID);
+#pragma warning disable CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
+                PaninoEntity panino = _db.Panino.FirstOrDefault(x => x.PaninoID == temp);
+#pragma warning restore CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
+                    ModalDetail Modale = new ModalDetail
+                    {
+                        Nome = panino.Nome,
+                        Descrizione = panino.Descrizione,
+                        Prezzo = panino.Prezzo,
+                        PathImage = panino.PathImage
+                    };
+                    return PartialView(Modale);
+            }
+            catch (Exception ex)
+            {
+
+#pragma warning disable CA2200 // Eseguire il rethrow per conservare i dettagli dello stack
+                throw ex;
+#pragma warning restore CA2200 // Eseguire il rethrow per conservare i dettagli dello stack
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Add(Microsoft.AspNetCore.Http.IFormCollection form)
+        {
+          /*  for (int ContaElementi = 0; ContaElementi < form["dati"].Count; ContaElementi++)
+            {
+                string valore = form["dati"][ContaElementi].ToString();
+            }*/
+            return RedirectToAction("Menu");
+        }
+        #endregion
     }
 }

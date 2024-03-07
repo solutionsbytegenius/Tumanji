@@ -1,0 +1,34 @@
+﻿@model ModalDetail
+@using (Html.BeginForm("Add", "Home"))
+{
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Dettagli Panino</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="PaninoID" value="@ViewData["PaninoID"]" />
+                
+                <center>
+                    <img src="@Model.PathImage" />
+                </center> 
+                <br />
+                <h1>@Model.Nome</h1>
+                <br />
+                <p>@Model.Descrizione</p>
+                <br />
+                <br />
+                <p>€ @Model.Prezzo</p>
+                <br />
+                <input class="form-check-input" type="checkbox" value="" id="Menuplus" name="Menuplus">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                <button type="submit" class="btn btn-primary">Aggiungi Al carrello</button>
+            </div>
+        </div>
+    </div>
+}

@@ -19,14 +19,18 @@
         @foreach (var x in Model)
         {
             <div class="col-md-3">
-                <div class="card" style="width: 18rem; margin-bottom:20px;">
-                    <img class="card-img-top" src="@x.PathImage" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">@x.Nome</h5>
-                        <p class="card-text">€ @x.Prezzo</p>
-                        <a href="#" class="btn btn-primary">Dettagli</a>
+                <form action="ModalDetail" method="post">
+                    <div class="card" style="width: 18rem; margin-bottom:20px;">
+
+                        <img class="card-img-top" src="@x.PathImage" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@x.Nome</h5>
+                            <p class="card-text">€ @x.Prezzo</p>
+                            <input type="hidden" name="PaninoID" value=@x.PaninoID.ToString() />
+                            <button id="btnApriModale" type="submit" class="btn btn-primary modal-link">Dettagli</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         }
     </div>

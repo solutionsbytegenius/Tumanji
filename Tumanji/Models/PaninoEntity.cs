@@ -8,6 +8,7 @@ namespace Tumanji.Models
         public Guid PaninoID { get; set; }
         public required string Nome { get; set;}
         public required string Descrizione { get; set;}
+        public string Categoria { get; set; } = "";
         public double Prezzo { get; set;}
         public DateTime DataCreazione { get; set;}
         public required Byte[] Immagine { get; set;}
