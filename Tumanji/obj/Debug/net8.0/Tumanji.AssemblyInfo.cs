@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tumanji")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5350148a4d15ea2c181928ec3f8fb07a513bb93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2bde02d876457321525a18b5823e3a9ee8f2e62")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tumanji")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tumanji")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

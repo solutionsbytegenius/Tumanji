@@ -25,6 +25,17 @@ namespace Tumanji.Controllers
         }
 
         [HttpGet]
+        public IActionResult Create()
+        {
+            Panino panino = new Panino();
+            return PartialView("_EditPaninoPartialView", panino);
+        }
+
+        [HttpPost]
+
+
+
+        [HttpGet]
         public IActionResult Login()
         {
             if (String.IsNullOrEmpty(HttpContext?.Session.GetString("UserID")))

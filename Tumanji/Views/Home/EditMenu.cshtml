@@ -1,6 +1,8 @@
-﻿@{
+﻿@model IEnumerable<PaninoEntity>
+@{
     ViewData["Title"] = "Modifica Menù";
 }
+
 <div class="Container">
     <div class="row">
         <div class="col-md-3"></div>
@@ -15,6 +17,7 @@
 <br />
 <br />
 <br />
+<div class="PlaceHolderHere"></div>
 <div class="container">
     <div class="row">
         <div class="table-responsive ">
@@ -27,7 +30,8 @@
                         <th>Panino del Mese</th>
                         <th>In Menù</th>
                         <th>Data di Creazione</th>
-                        <th><button class="btn-success"><i class="bi bi-plus-circle"></i></button></th>
+                        <th><button class="btn btn-success" data-toggle="ajax-modal" data-target="#addBread" 
+                            data-url="@Url.Action("Create")"><i class="bi bi-plus-circle"></i></button></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,7 +63,10 @@
                                 @x.DataCreazione
                             </td>
                             <td>
-                                <button class="btn-Primary"><i class="bi bi-pencil-square"></i></button>
+                                <button class="btn btn-Primary" data-toggle="ajax-modal" data-target="#addBread"
+                                        data-url="@Url.Action($"Edit/{x.PaninoID}")">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
                             </td>
                         </tr>
                     }
