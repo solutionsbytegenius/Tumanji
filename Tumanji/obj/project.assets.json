@@ -2729,19 +2729,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikoX\\.nuget\\packages\\": {}
+    "C:\\Users\\nikec\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
+      "projectUniqueName": "C:\\Users\\nikec\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
       "projectName": "Tumanji",
-      "projectPath": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
-      "packagesPath": "C:\\Users\\nikoX\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nikoX\\source\\repos\\Tumanji\\Tumanji\\obj\\",
+      "projectPath": "C:\\Users\\nikec\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
+      "packagesPath": "C:\\Users\\nikec\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nikec\\source\\repos\\Tumanji\\Tumanji\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nikoX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nikec\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2761,6 +2761,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2795,7 +2800,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
