@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Tumanji.Data;
 using Tumanji.Models;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Tumanji.Controllers
@@ -23,8 +24,44 @@ namespace Tumanji.Controllers
             IEnumerable<NewsEntity> News = _db.News.ToList();
             return View(News);
         }
+		/*
+				[HttpGet]
+				public IActionResult Create()
+				{
+					Panino panino = new Panino();
+					return PartialView("_EditPaninoPartialView", panino);
+				}
 
-        [HttpGet]
+				[HttpPost]
+				public IActionResult Create(PaninoEntity panino)
+				{
+					_db.Panino.Add(panino);
+					_db.SaveChanges();
+					return RedirectToAction("Home", "EditMenu");
+
+				}*/
+
+		// GET: Panini/AggiungiPanino
+		[HttpGet]
+		public ActionResult AggiungiPanino()
+		{
+			return PartialView("_AggiungiPanino");
+		}
+
+		// POST: Panini/AggiungiPanino
+		[HttpPost]
+		public ActionResult AggiungiPanino(PaninoEntity panino)
+		{
+			if (ModelState.IsValid)
+			{
+				_db.Panino.Add(panino);
+				_db.SaveChanges();
+				return RedirectToAction("Index");
+			}
+			return PartialView("_AggiungiPanino", panino);
+		}
+
+	[HttpGet]
         public IActionResult Login()
         {
             if (String.IsNullOrEmpty(HttpContext?.Session.GetString("UserID")))

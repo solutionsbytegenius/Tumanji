@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\InnerDialogs\**" />
-    <Content Remove="Views\InnerDialogs\**" />
-    <EmbeddedResource Remove="Views\InnerDialogs\**" />
-    <None Remove="Views\InnerDialogs\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Remove="wwwroot\Images\Panini\logo.png" />
   </ItemGroup>
 
@@ -23,7 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Home\InnerDialogs\" />
+    <Folder Include="Views\Home\Modal\" />
+    <Folder Include="Views\InnerDialogs\" />
     <Folder Include="wwwroot\lib\Font\" />
   </ItemGroup>
 
