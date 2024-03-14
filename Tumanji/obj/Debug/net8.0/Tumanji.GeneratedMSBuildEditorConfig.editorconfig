@@ -42,12 +42,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/Modal/_EditPaninoPartialView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb2RhbFxfRWRpdFBhbmlub1BhcnRpYWxWaWV3LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/News.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Home/_AggiungiPanino.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQWdnaXVuZ2lQYW5pbm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nikec/source/repos/Tumanji/Tumanji/Views/Shared/Error.cshtml]

@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Home\Modal\" />
     <Folder Include="Views\InnerDialogs\" />
     <Folder Include="wwwroot\lib\Font\" />
   </ItemGroup>
