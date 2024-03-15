@@ -1,0 +1,56 @@
+﻿@model PaninoEntity
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">@Model.Nome</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<img class="card-img-top" src="/Images/Panini/logo.png" alt="Card image cap">
+				<p>@Model.Descrizione</p>
+				<p>€ @Model.Prezzo</p>
+				<div class="row">
+					<div class="col-md-5">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="check1" name="Menuplus" value="something" />
+							<label class="form-check-label">Menu+? (+ €2,50)</label>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="dropdown" id="DropDownBevanda" style="display:none;">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+								Bevanda
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Acqua Naturale</a></li>
+								<li><a class="dropdown-item" href="#">Acqua Frizzante</a></li>
+								<li><a class="dropdown-item" href="#">Coca-Cola</a></li>
+								<li><a class="dropdown-item" href="#">Coca-Cola Zero</a></li>
+								<li><a class="dropdown-item" href="#">Birra</a></li>
+							</ul>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="Note">Note:</label>
+					<textarea class="form-control" rows="3" id="Note" placeholder="Inserisci eventuali note..."></textarea>
+				</div>
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Chiudi</button>
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aggiungi al carrello</button>
+			</div>
+
+		</div>
+	</div>
+</div>

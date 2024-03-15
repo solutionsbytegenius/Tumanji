@@ -24,23 +24,7 @@ namespace Tumanji.Controllers
             IEnumerable<NewsEntity> News = _db.News.ToList();
             return View(News);
         }
-		/*
-				[HttpGet]
-				public IActionResult Create()
-				{
-					Panino panino = new Panino();
-					return PartialView("_EditPaninoPartialView", panino);
-				}
-
-				[HttpPost]
-				public IActionResult Create(PaninoEntity panino)
-				{
-					_db.Panino.Add(panino);
-					_db.SaveChanges();
-					return RedirectToAction("Home", "EditMenu");
-
-				}*/
-
+		
 		// GET: Panini/AggiungiPanino
 		[HttpGet]
 		public ActionResult AggiungiPanino()
@@ -135,8 +119,15 @@ namespace Tumanji.Controllers
             }
         }
 
+		public IActionResult ShowModal(Guid PaninoID)
+		{
+#pragma warning disable CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
+			PaninoEntity Panino = _db.Panino.FirstOrDefault(x=>x.PaninoID==PaninoID);
+#pragma warning restore CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
+			return PartialView("ModalDetail", Panino);
+		}
 
-        public IActionResult Carrello()
+		public IActionResult Carrello()
         {
             IEnumerable<OrdineEntity> Ordine = _db.Ordine.ToList();
             return View(Ordine);

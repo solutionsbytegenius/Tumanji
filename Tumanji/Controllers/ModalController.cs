@@ -43,7 +43,10 @@ namespace Tumanji.Controllers
 			return RedirectToAction("Home");
 
 		}
-
+		public IActionResult ShowModal()
+		{
+			return PartialView("Modal");
+		}
 
 
 	}
