@@ -1,34 +1,44 @@
-﻿@model ModalDetail
-@using (Html.BeginForm("Add", "Home"))
-{
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Dettagli Panino</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <input type="hidden" name="PaninoID" value="@ViewData["PaninoID"]" />
-                
-                <center>
-                    <img src="@Model.PathImage" />
-                </center> 
-                <br />
-                <h1>@Model.Nome</h1>
-                <br />
-                <p>@Model.Descrizione</p>
-                <br />
-                <br />
-                <p>€ @Model.Prezzo</p>
-                <br />
-                <input class="form-check-input" type="checkbox" value="" id="Menuplus" name="Menuplus">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-                <button type="submit" class="btn btn-primary">Aggiungi Al carrello</button>
-            </div>
-        </div>
-    </div>
-}
+﻿@model PaninoEntity
+<script>
+	$(document).ready(function () {
+		$('#check1').change(function () {
+			if (this.checked) {
+				$('#DropDownBevanda').show();
+			} else {
+				$('#DropDownBevanda').hide();
+			}
+		});
+	});
+
+</script>
+<img class="card-img-top" src="/Images/Panini/logo.png" alt="Card image cap">
+<p>@Model.Descrizione</p>
+<p>€ @Model.Prezzo</p>
+<div class="row">
+	<div class="col-md-5">
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="check1" name="Menuplus" value="something" />
+			<label class="form-check-label">Menu+? (+ €2,50)</label>
+		</div>
+	</div>
+	<div class="col-md-5">
+		<div class="dropdown" id="DropDownBevanda" style="display:none;">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+				Bevanda
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Acqua Naturale</a></li>
+				<li><a class="dropdown-item" href="#">Acqua Frizzante</a></li>
+				<li><a class="dropdown-item" href="#">Coca-Cola</a></li>
+				<li><a class="dropdown-item" href="#">Coca-Cola Zero</a></li>
+				<li><a class="dropdown-item" href="#">Birra</a></li>
+			</ul>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="Note">Note:</label>
+	<textarea class="form-control" rows="3" id="Note" placeholder="Inserisci eventuali note..."></textarea>
+</div>
