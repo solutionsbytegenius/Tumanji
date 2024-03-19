@@ -7,11 +7,12 @@
     $(document).ready(function () {
         $('.open-modal').click(function () {
             var guid = $(this).data('guid');
+            document.getElementById("Panino").value = guid;
+            console.log(document.getElementById("Panino").value);
             $.get('/Home/ShowModal', { PaninoID: guid })
                 .done(function (data) {
                     // Popoliamo dinamicamente il titolo e il corpo della modale con i dati ricevuti dalla richiesta AJAX
                     $('#modalTitle').text(data.Nome);
-                    console.log(data);
                     $('#modalBody').html(data);
                     $('#myModal').modal('show');
                 })
@@ -71,15 +72,18 @@
                 <h4 class="modal-title" id="modalTitle"></h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <!-- Modal body -->
-            <div class="modal-body" id="modalBody">
-                <!-- Il corpo della modale sarà popolato dinamicamente tramite AJAX -->
-            </div>
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Chiudi</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aggiungi al carrello</button>
-            </div>
+            <form method="post" action="AddCart">
+                <input type="hidden" id="Panino" name="PaninoID" value="" />
+                <!-- Modal body -->
+                <div class="modal-body" id="modalBody">
+                    <!-- Il corpo della modale sarà popolato dinamicamente tramite AJAX -->
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Chiudi</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Aggiungi al carrello</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

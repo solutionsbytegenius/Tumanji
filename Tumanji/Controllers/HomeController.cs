@@ -13,6 +13,7 @@ namespace Tumanji.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _db;
+        private CartItemCollection CartCollection = new CartItemCollection();
         public HomeController(ILogger<HomeController> logger, ApplicationDbContext db)
         {
             _db = db;
@@ -45,7 +46,16 @@ namespace Tumanji.Controllers
 			return PartialView("_AggiungiPanino", panino);
 		}
 
-	[HttpGet]
+
+        [HttpPost]
+        public IActionResult AddCart(CartItem item)
+        {
+            
+            CartCollection.Add(item);
+            return RedirectToAction("Menu");
+        }
+
+    [HttpGet]
         public IActionResult Login()
         {
             if (String.IsNullOrEmpty(HttpContext?.Session.GetString("UserID")))
