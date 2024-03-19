@@ -2,9 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
 using Tumanji.Data;
+using System.Runtime.Serialization.Formatters.Binary;
 using Tumanji.Models;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Newtonsoft.Json;
+using System.Text.Json;
 
 
 namespace Tumanji.Controllers
@@ -50,12 +54,27 @@ namespace Tumanji.Controllers
         [HttpPost]
         public IActionResult AddCart(CartItem item)
         {
-            item.ID=Guid.NewGuid();
+			if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("Collection")))
+			{
+#pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
+				var jsonStringFromSession = HttpContext.Session.GetString("Collection");
+#pragma warning restore CS8602 // Dereferenziamento di un possibile riferimento Null.
+#pragma warning disable CS8601 // Possibile assegnazione di riferimento Null.
+#pragma warning disable CS8604 // Possibile argomento di riferimento Null.
+				CartCollection = JsonConvert.DeserializeObject<CartItemCollection>(jsonStringFromSession);
+#pragma warning restore CS8604 // Possibile argomento di riferimento Null.
+#pragma warning restore CS8601 // Possibile assegnazione di riferimento Null.
+			}
+			item.ID=Guid.NewGuid();
             if (String.IsNullOrEmpty(item.Note)) item.Note = "";
             if (String.IsNullOrEmpty(item.Bevanda)) item.Bevanda = "";
 
-            CartCollection.Add(item);
-            return RedirectToAction("Menu");
+#pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
+			CartCollection.Add(item);
+#pragma warning restore CS8602 // Dereferenziamento di un possibile riferimento Null.
+			var jsonString = JsonConvert.SerializeObject(CartCollection);
+			HttpContext.Session.SetString("Collection", jsonString.ToString());
+			return RedirectToAction("Menu");
         }
 
     [HttpGet]

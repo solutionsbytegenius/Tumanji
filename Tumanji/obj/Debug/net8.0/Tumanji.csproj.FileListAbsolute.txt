@@ -211,3 +211,4 @@ C:\Users\Nico Di Marco\source\repos\Tumanji\Tumanji\obj\Debug\net8.0\refint\Tuma
 C:\Users\Nico Di Marco\source\repos\Tumanji\Tumanji\obj\Debug\net8.0\Tumanji.pdb
 C:\Users\Nico Di Marco\source\repos\Tumanji\Tumanji\obj\Debug\net8.0\Tumanji.genruntimeconfig.cache
 C:\Users\Nico Di Marco\source\repos\Tumanji\Tumanji\obj\Debug\net8.0\ref\Tumanji.dll
+C:\Users\Nico Di Marco\source\repos\Tumanji\Tumanji\bin\Debug\net8.0\Newtonsoft.Json.dll
