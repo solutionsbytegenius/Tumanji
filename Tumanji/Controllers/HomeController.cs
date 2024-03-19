@@ -50,7 +50,10 @@ namespace Tumanji.Controllers
         [HttpPost]
         public IActionResult AddCart(CartItem item)
         {
-            
+            item.ID=Guid.NewGuid();
+            if (String.IsNullOrEmpty(item.Note)) item.Note = "";
+            if (String.IsNullOrEmpty(item.Bevanda)) item.Bevanda = "";
+
             CartCollection.Add(item);
             return RedirectToAction("Menu");
         }

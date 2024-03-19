@@ -4,8 +4,10 @@
 		$('#check1').change(function () {
 			if (this.checked) {
 				$('#DropDownBevanda').show();
+				document.getElementById("check").value = true;
 			} else {
 				$('#DropDownBevanda').hide();
+				document.getElementById("check").value = false;
 			}
 		});
 	});
@@ -17,13 +19,14 @@
 <div class="row">
 	<div class="col-md-5">
 		<div class="form-check">
-			<input class="form-check-input" type="checkbox" id="check1" name="Plus" value="something" />
+			<input class="form-check-input" type="checkbox" id="check1" />
+			<input type="hidden" id="check" name="Plus" value=""/>
 			<label class="form-check-label">Menu+? (+ €2,50)</label>
 		</div>
 	</div>
 	<div class="col-md-5">
-		<div class="dropdown" id="DropDownBevanda" style="display:none;" name="Bevanda">
-			<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+		<div class="dropdown" id="DropDownBevanda" style="display:none;">
+			@* <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
 				Bevanda
 			</button>
 			<ul class="dropdown-menu">
@@ -32,7 +35,14 @@
 				<li><a class="dropdown-item" href="#" name="Bevanda">Coca-Cola</a></li>
 				<li><a class="dropdown-item" href="#" name="Bevanda">Coca-Cola Zero</a></li>
 				<li><a class="dropdown-item" href="#">Birra</a></li>
-			</ul>
+			</ul> *@
+			<select class="form-select btn btn-primary dropdown-toggle" name="Bevanda" aria-label="Default select example">
+				<option value="" selected>Bevanda</option>
+				<option value="Acqua Naturale">Acqua Naturale</option>
+				<option value="Acqua Frizzante">Acqua Frizzante</option>
+				<option value="Coca-Cola">Coca-Cola</option>
+				<option value="Birra">Birra</option>
+			</select>
 		</div>
 		<div class="col-md-2"></div>
 	</div>
