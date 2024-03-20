@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpicyLand")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5cd4a7360f071f786eec3e85b95b22355f97677")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40c21a34b30349d4586590b3b3c450c7ddf7106b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpicyLand")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpicyLand")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
