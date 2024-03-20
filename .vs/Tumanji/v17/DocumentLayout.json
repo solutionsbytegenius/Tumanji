@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\views\\home\\ordinazioni.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\views\\home\\ordinazioni.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\views\\home\\carrello.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\views\\home\\carrello.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\views\\home\\modaldetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\views\\home\\modaldetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|c:\\users\\nico di marco\\source\\repos\\tumanji\\tumanji\\models\\cartitemcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6403AA42-33BE-441D-869F-57373868CF59}|Tumanji\\Tumanji.csproj|solutionrelative:tumanji\\models\\cartitemcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,45 +74,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Carrello.cshtml",
+              "DocumentMoniker": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Views\\Home\\Carrello.cshtml",
+              "RelativeDocumentMoniker": "Tumanji\\Views\\Home\\Carrello.cshtml",
+              "ToolTip": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Views\\Home\\Carrello.cshtml",
+              "RelativeToolTip": "Tumanji\\Views\\Home\\Carrello.cshtml",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGMAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-20T17:03:24.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Tumanji\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Tumanji\\Views\\Home\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-20T16:08:05.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Ordinazioni.cshtml",
+              "DocumentMoniker": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Views\\Home\\Ordinazioni.cshtml",
+              "RelativeDocumentMoniker": "Tumanji\\Views\\Home\\Ordinazioni.cshtml",
+              "ToolTip": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Views\\Home\\Ordinazioni.cshtml",
+              "RelativeToolTip": "Tumanji\\Views\\Home\\Ordinazioni.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAmwEoAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-20T15:31:36.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Tumanji\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Tumanji\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAnwFUAAAAMAAAA",
+              "ViewState": "AQIAAJUAAAAAAAAAAADwv6oAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T14:36:17.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CartItemCollection.cs",
-              "DocumentMoniker": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Models\\CartItemCollection.cs",
-              "RelativeDocumentMoniker": "Tumanji\\Models\\CartItemCollection.cs",
-              "ToolTip": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Models\\CartItemCollection.cs",
-              "RelativeToolTip": "Tumanji\\Models\\CartItemCollection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T09:45:37.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Program.cs",
-              "RelativeDocumentMoniker": "Tumanji\\Program.cs",
-              "ToolTip": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Program.cs",
-              "RelativeToolTip": "Tumanji\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T14:17:18.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ModalDetail.cshtml",
               "DocumentMoniker": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Views\\Home\\ModalDetail.cshtml",
               "RelativeDocumentMoniker": "Tumanji\\Views\\Home\\ModalDetail.cshtml",
@@ -120,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "Tumanji\\Models\\CartItem.cs",
@@ -139,9 +157,10 @@
               "RelativeDocumentMoniker": "Tumanji\\Views\\Home\\Menu.cshtml",
               "ToolTip": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Views\\Home\\Menu.cshtml",
               "RelativeToolTip": "Tumanji\\Views\\Home\\Menu.cshtml",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEsAAAA/AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEsAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-06T14:36:17.28Z"
+              "WhenOpened": "2024-03-06T14:36:17.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -151,7 +170,7 @@
               "RelativeDocumentMoniker": "Tumanji\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Tumanji\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADwAAABxAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEgAAAB4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-06T14:36:17.285Z",
               "EditorCaption": ""

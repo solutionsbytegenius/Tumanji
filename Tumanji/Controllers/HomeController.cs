@@ -166,6 +166,53 @@ namespace Tumanji.Controllers
             return View(Panino);
         }
 
+        public IActionResult Ordinazioni()
+        {
+            OrdineCollection OrdineCollection = new OrdineCollection();
+            /*  List<OrdineEntity> Ordini = _db.Ordine.Where(x => x.DataPrenotazione.Date == DateTime.Now.Date).ToList();
+
+              foreach(var ordine in Ordini)
+              {
+                  var item = new Ordine()
+                  {
+                      OrdineID = ordine.OrdineID,
+                      Consegnato = false,
+                      Annullato = false,
+                      Cliente = ordine.Cliente
+                  };
+                  if (OrdineCollection != null)
+                  {
+                      var panino = _db.Panino.FirstOrDefault(x=>x.PaninoID == ordine.PaninoID);
+
+                      if (OrdineCollection.Any(x=>x.Panino == panino.Nome && !String.IsNullOrEmpty(x.PlusBevanda) && !String.IsNullOrEmpty(x.Note)))
+                      {
+                              OrdineCollection.FirstOrDefault(x => x.Panino == panino.Nome && !String.IsNullOrEmpty(x.PlusBevanda) && !String.IsNullOrEmpty(x.Note)).Quantita++;
+                      }
+                      else
+                      {
+                          item.Panino = panino.Nome;
+                          item.Quantita = 1;
+                          if (ordine.Plus)
+                          {
+                              item.PlusBevanda = ordine.Bevanda;
+                              item.PlusPatatine = "Patatine fritte";
+                          }
+                          item.Note = ordine.Note;
+                          item.numOrdine = OrdineCollection.Count + 1;
+                          OrdineCollection.Add(item);
+                      }
+                  }
+                  else
+                  {
+                      item.numOrdine = 1;
+                      OrdineCollection.Add(item);
+                  }
+              }*/
+            if (OrdineCollection != null)
+                return View("Ordinazioni", OrdineCollection);
+            else return View("Ordinazioni");
+        }
+
         public IActionResult EditMenu()
         {
             IEnumerable<PaninoEntity> Panino = _db.Panino.ToList();
