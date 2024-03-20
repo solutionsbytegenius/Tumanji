@@ -56,7 +56,17 @@
                         <li class="nav-item">
                             @if (String.IsNullOrEmpty(@Accessor.HttpContext?.Session.GetString("UserID")))
                             {
-                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Carrello"><i class="bi bi-cart-fill"></i> Carrello</a>
+                                <a  class="nav-link text-light position-relative" asp-area="" asp-controller="Home" asp-action="Carrello">
+                                    <i class="bi bi-cart-fill"></i> Carrello
+                                    @if (!String.IsNullOrEmpty(@Accessor.HttpContext?.Session.GetString("Count")) && @Accessor.HttpContext?.Session.GetString("Count")!="0")
+                                    {
+                                       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            @Accessor.HttpContext?.Session.GetString("Count")
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span> 
+                                    }
+                                    
+                                </a>
                             }
                             else
                             {
@@ -110,7 +120,7 @@
                 <div class="col-md-2"></div>
             </div>
         </div>
-        
+
     </footer>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

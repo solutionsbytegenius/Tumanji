@@ -2773,19 +2773,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikec\\.nuget\\packages\\": {}
+    "C:\\Users\\Nico Di Marco\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nikec\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
+      "projectUniqueName": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
       "projectName": "Tumanji",
-      "projectPath": "C:\\Users\\nikec\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
-      "packagesPath": "C:\\Users\\nikec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nikec\\source\\repos\\Tumanji\\Tumanji\\obj\\",
+      "projectPath": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
+      "packagesPath": "C:\\Users\\Nico Di Marco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nikec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nico Di Marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

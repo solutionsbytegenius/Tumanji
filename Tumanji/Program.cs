@@ -12,7 +12,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSession(options =>
 {
     options.Cookie.Name = ".Tumanji.Session";
-    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.IdleTimeout = TimeSpan.FromMinutes(5);
     options.Cookie.IsEssential = true;
 });
 
