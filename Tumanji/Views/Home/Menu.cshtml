@@ -8,9 +8,11 @@
         $('.open-modal').click(function () {
             var guid = $(this).data('guid');
             document.getElementById("Panino").value = guid;
-            console.log(document.getElementById("Panino").value);
+            console.log($(this).data());
             $.get('/Home/ShowModal', { PaninoID: guid })
                 .done(function (data) {
+                    console.log(data);
+                    console.log(data.Nome);
                     // Popoliamo dinamicamente il titolo e il corpo della modale con i dati ricevuti dalla richiesta AJAX
                     $('#modalTitle').text(data.Nome);
                     $('#modalBody').html(data);
@@ -19,6 +21,7 @@
                 .fail(function (xhr, status, error) {
                     console.error("Errore durante il caricamento dei dati della modale:", error);
                 });
+            
         });
     });
 </script>

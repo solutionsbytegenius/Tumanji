@@ -29,55 +29,60 @@ namespace Tumanji.Controllers
             IEnumerable<NewsEntity> News = _db.News.ToList();
             return View(News);
         }
-		
-		// GET: Panini/AggiungiPanino
-		[HttpGet]
-		public ActionResult AggiungiPanino()
-		{
-			return PartialView("_AggiungiPanino");
-		}
 
-		// POST: Panini/AggiungiPanino
-		[HttpPost]
-		public ActionResult AggiungiPanino(PaninoEntity panino)
-		{
-			if (ModelState.IsValid)
-			{
-				_db.Panino.Add(panino);
-				_db.SaveChanges();
-				return RedirectToAction("Index");
-			}
-			return PartialView("_AggiungiPanino", panino);
-		}
+        // GET: Panini/AggiungiPanino
+        [HttpGet]
+        public ActionResult AggiungiPanino()
+        {
+            return PartialView("_AggiungiPanino");
+        }
+
+        // POST: Panini/AggiungiPanino
+        [HttpPost]
+        public ActionResult AggiungiPanino(PaninoEntity panino)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Panino.Add(panino);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return PartialView("_AggiungiPanino", panino);
+        }
 
 
         [HttpPost]
         public IActionResult AddCart(CartItem item)
         {
-			if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("Collection")))
-			{
+            if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("Collection")))
+            {
 #pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
-				var jsonStringFromSession = HttpContext.Session.GetString("Collection");
+                var jsonStringFromSession = HttpContext.Session.GetString("Collection");
 #pragma warning restore CS8602 // Dereferenziamento di un possibile riferimento Null.
 #pragma warning disable CS8601 // Possibile assegnazione di riferimento Null.
 #pragma warning disable CS8604 // Possibile argomento di riferimento Null.
-				CartCollection = JsonConvert.DeserializeObject<CartItemCollection>(jsonStringFromSession);
+                CartCollection = JsonConvert.DeserializeObject<CartItemCollection>(jsonStringFromSession);
 #pragma warning restore CS8604 // Possibile argomento di riferimento Null.
 #pragma warning restore CS8601 // Possibile assegnazione di riferimento Null.
-			}
-			item.ID=Guid.NewGuid();
+            }
+            item.ID = Guid.NewGuid();
             if (String.IsNullOrEmpty(item.Note)) item.Note = "";
             if (String.IsNullOrEmpty(item.Bevanda)) item.Bevanda = "";
+            if (item.Plus) item.Prezzo += 2.50;
+            if (String.IsNullOrEmpty(item.Panino) || item.Panino.ToLower() == "undefined" ) 
+            {
+                item.Panino = _db.Panino.FirstOrDefault(x => x.PaninoID == item.PaninoID).Nome;
+            }
 
 #pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
-			CartCollection.Add(item);
+            CartCollection.Add(item);
 #pragma warning restore CS8602 // Dereferenziamento di un possibile riferimento Null.
-			var jsonString = JsonConvert.SerializeObject(CartCollection);
-			HttpContext.Session.SetString("Collection", jsonString.ToString());
-			return RedirectToAction("Menu");
+            var jsonString = JsonConvert.SerializeObject(CartCollection);
+            HttpContext.Session.SetString("Collection", jsonString.ToString());
+            return RedirectToAction("Menu");
         }
 
-    [HttpGet]
+        [HttpGet]
         public IActionResult Login()
         {
             if (String.IsNullOrEmpty(HttpContext?.Session.GetString("UserID")))
@@ -152,18 +157,32 @@ namespace Tumanji.Controllers
             }
         }
 
-		public IActionResult ShowModal(Guid PaninoID)
-		{
-#pragma warning disable CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
-			PaninoEntity Panino = _db.Panino.FirstOrDefault(x=>x.PaninoID==PaninoID);
-#pragma warning restore CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
-			return PartialView("ModalDetail", Panino);
-		}
-
-		public IActionResult Carrello()
+        public IActionResult ShowModal(Guid PaninoID)
         {
-            IEnumerable<OrdineEntity> Ordine = _db.Ordine.ToList();
-            return View(Ordine);
+#pragma warning disable CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
+            PaninoEntity Panino = _db.Panino.FirstOrDefault(x => x.PaninoID == PaninoID);
+#pragma warning restore CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
+            return PartialView("ModalDetail", Panino);
+        }
+
+        public IActionResult Carrello()
+        {
+            if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("Collection")))
+            {
+#pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
+                var jsonStringFromSession = HttpContext.Session.GetString("Collection");
+#pragma warning restore CS8602 // Dereferenziamento di un possibile riferimento Null.
+#pragma warning disable CS8601 // Possibile assegnazione di riferimento Null.
+#pragma warning disable CS8604 // Possibile argomento di riferimento Null.
+                CartCollection = JsonConvert.DeserializeObject<CartItemCollection>(jsonStringFromSession);
+#pragma warning restore CS8604 // Possibile argomento di riferimento Null.
+#pragma warning restore CS8601 // Possibile assegnazione di riferimento Null.
+            }
+            if (CartCollection.Any())
+            {
+                return View("Carrello",CartCollection);
+            }
+            return View("Carrello");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -171,66 +190,5 @@ namespace Tumanji.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
-        #region modals
-        private string[] GetNomiColonneDettagli()
-        {
-            List<string> returnDati = new List<string>();
-            returnDati.Add("Nome");
-            returnDati.Add("Descrizione");
-            returnDati.Add("Prezzo");
-            returnDati.Add("Menu +");
-            returnDati.Add("PathImage");
-            return returnDati.ToArray();
-        }
-        private string[] GetTipoColonneAnagrafica()
-        {
-            List<string> returnDati = new List<string>();
-            returnDati.Add("Testo");
-            returnDati.Add("Testo");
-            returnDati.Add("Testo");
-            returnDati.Add("Checkbox");
-            returnDati.Add("Testo");
-            return returnDati.ToArray();
-        }
-
-        [HttpPost]
-        public ActionResult ModalDetail(ModalPaninoPipe Panino)
-        {
-            try
-            {
-                Guid temp = new Guid(Panino.PaninoID);
-#pragma warning disable CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
-                PaninoEntity panino = _db.Panino.FirstOrDefault(x => x.PaninoID == temp);
-#pragma warning restore CS8600 // Conversione del valore letterale Null o di un possibile valore Null in un tipo che non ammette i valori Null.
-                    ModalDetail Modale = new ModalDetail
-                    {
-                        Nome = panino.Nome,
-                        Descrizione = panino.Descrizione,
-                        Prezzo = panino.Prezzo,
-                        PathImage = panino.PathImage
-                    };
-                    return PartialView(Modale);
-            }
-            catch (Exception ex)
-            {
-
-#pragma warning disable CA2200 // Eseguire il rethrow per conservare i dettagli dello stack
-                throw ex;
-#pragma warning restore CA2200 // Eseguire il rethrow per conservare i dettagli dello stack
-            }
-        }
-
-        [HttpPost]
-        public ActionResult Add(Microsoft.AspNetCore.Http.IFormCollection form)
-        {
-          /*  for (int ContaElementi = 0; ContaElementi < form["dati"].Count; ContaElementi++)
-            {
-                string valore = form["dati"][ContaElementi].ToString();
-            }*/
-            return RedirectToAction("Menu");
-        }
-        #endregion
     }
 }

@@ -5,9 +5,11 @@
         #region Vars
         public Guid ID { get; set; }
         public Guid PaninoID { get; set; }
+        public string Panino { get; set; } = "";
         public bool Plus { get; set; } = false;
         public string Note { get; set; } = "";
         public string Bevanda { get; set; } = "";
+        public double Prezzo { get; set; }
 
         #endregion
 
@@ -21,8 +23,10 @@
             ID = new Guid();
             PaninoID = new Guid();
             Plus = false;
-            Note = string.Empty;
-            Bevanda = string.Empty;
+            Panino = "";
+            Note = "";
+			Bevanda = "";
+            Prezzo = 0;
         }
         /// <summary>
         /// Costruttore
