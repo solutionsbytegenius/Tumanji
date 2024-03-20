@@ -54,6 +54,7 @@ namespace Tumanji.Controllers
         [HttpPost]
         public IActionResult AddCart(CartItem item)
         {
+            double totale = 0;
             if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("Collection")))
             {
 #pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
@@ -64,7 +65,8 @@ namespace Tumanji.Controllers
                 CartCollection = JsonConvert.DeserializeObject<CartItemCollection>(jsonStringFromSession);
 #pragma warning restore CS8604 // Possibile argomento di riferimento Null.
 #pragma warning restore CS8601 // Possibile assegnazione di riferimento Null.
-            }
+                totale = double.Parse(HttpContext?.Session.GetString("Totale"));
+			}
             item.ID = Guid.NewGuid();
             if (String.IsNullOrEmpty(item.Note)) item.Note = "";
             if (String.IsNullOrEmpty(item.Bevanda)) item.Bevanda = "";
@@ -76,15 +78,19 @@ namespace Tumanji.Controllers
 
 #pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
             CartCollection.Add(item);
+            totale += item.Prezzo;
 #pragma warning restore CS8602 // Dereferenziamento di un possibile riferimento Null.
+            
             var jsonString = JsonConvert.SerializeObject(CartCollection);
             HttpContext.Session.SetString("Collection", jsonString.ToString());
+            HttpContext.Session.SetString("Totale", totale.ToString());
             return RedirectToAction("Menu");
         }
         
         [HttpPost]
         public IActionResult DeleteFromCart(Guid ID)
         {
+            double totale = 0;
             if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("Collection")))
             {
 #pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
@@ -95,15 +101,17 @@ namespace Tumanji.Controllers
                 CartCollection = JsonConvert.DeserializeObject<CartItemCollection>(jsonStringFromSession);
 #pragma warning restore CS8604 // Possibile argomento di riferimento Null.
 #pragma warning restore CS8601 // Possibile assegnazione di riferimento Null.
-            }
+				totale = double.Parse(HttpContext?.Session.GetString("Totale"));
+			}
             CartItem item = CartCollection.FirstOrDefault(x => x.ID == ID);
-
+            totale -= item.Prezzo;
 #pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
             CartCollection.Remove(item);
 #pragma warning restore CS8602 // Dereferenziamento di un possibile riferimento Null.
             var jsonString = JsonConvert.SerializeObject(CartCollection);
             if (jsonString == "[]") jsonString = "";
             HttpContext.Session.SetString("Collection", jsonString.ToString());
+            HttpContext.Session.SetString("Totale", totale.ToString());
             return RedirectToAction("Carrello",CartCollection);
         }
 
