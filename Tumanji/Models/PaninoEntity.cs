@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Tumanji.Models
+namespace SpicyLand.Models
 {
     [Keyless]
     public class PaninoEntity

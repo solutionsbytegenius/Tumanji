@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Tumanji.Models
+namespace SpicyLand.Models
 {
     public class ModalDetail
     {

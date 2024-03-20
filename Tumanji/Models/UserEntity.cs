@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace Tumanji.Models
+namespace SpicyLand.Models
 {
     [Keyless]
     public class UserEntity

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YsD8YjEs/JGn0IFqVjVo3QA/H7eid5d7qMHKPRY7nrIi2tF8Hb+4vzEmWj18/UgFVNcf3SYoHPdpJQ3VjvBiZQ==",
+  "dgSpecHash": "J107w6QzZmgBqPrhngTr1OMBf7heJGcI764meNILsHujprFckhMsVe4Nfb55Pw5iZvQxATz6sbpIFpGmfmrUQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
+  "projectFilePath": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\SpicyLand.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nico Di Marco\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Nico Di Marco\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

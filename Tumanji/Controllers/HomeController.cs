@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
-using Tumanji.Data;
+using SpicyLand.Data;
 using System.Runtime.Serialization.Formatters.Binary;
-using Tumanji.Models;
+using SpicyLand.Models;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using System.Text.Json;
 
 
-namespace Tumanji.Controllers
+namespace SpicyLand.Controllers
 {
     public class HomeController : Controller
     {

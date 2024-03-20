@@ -1,4 +1,4 @@
-﻿namespace Tumanji.Models
+﻿namespace SpicyLand.Models
 {
     public class Panino
     {

@@ -1,12 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Tumanji.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Tumanji.bundle.scp.css"
+      "Id": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SpicyLand.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SpicyLand.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Logo\\logo.png",
-      "PackagePath": "staticwebassets\\Images\\Logo\\logo.png"
+      "Id": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Logo\\Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Logo\\Logo.png"
     },
     {
       "Id": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\wwwroot\\Images\\Panini\\159_desktop_it.png",
@@ -269,20 +269,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Tumanji.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SpicyLand.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Tumanji.props",
-      "PackagePath": "build\\Tumanji.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SpicyLand.props",
+      "PackagePath": "build\\SpicyLand.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Tumanji.props",
-      "PackagePath": "buildMultiTargeting\\Tumanji.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SpicyLand.props",
+      "PackagePath": "buildMultiTargeting\\SpicyLand.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Tumanji.props",
-      "PackagePath": "buildTransitive\\Tumanji.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SpicyLand.props",
+      "PackagePath": "buildTransitive\\SpicyLand.props"
     }
   ],
   "ElementsToRemove": []

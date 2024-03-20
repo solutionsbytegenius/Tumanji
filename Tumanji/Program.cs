@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Tumanji.Data;
+using SpicyLand.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,7 @@ builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSession(options =>
 {
-    options.Cookie.Name = ".Tumanji.Session";
+    options.Cookie.Name = ".SpicyLand.Session";
     options.IdleTimeout = TimeSpan.FromMinutes(5);
     options.Cookie.IsEssential = true;
 });

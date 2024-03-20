@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Tumanji.Models;
+using SpicyLand.Models;
 
-namespace Tumanji.Data
+namespace SpicyLand.Data
 {
     public class ApplicationDbContext : DbContext
     {

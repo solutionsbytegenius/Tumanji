@@ -2779,9 +2779,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
-      "projectName": "Tumanji",
-      "projectPath": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\Tumanji.csproj",
+      "projectUniqueName": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\SpicyLand.csproj",
+      "projectName": "SpicyLand",
+      "projectPath": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\SpicyLand.csproj",
       "packagesPath": "C:\\Users\\Nico Di Marco\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Nico Di Marco\\source\\repos\\Tumanji\\Tumanji\\obj\\",
       "projectStyle": "PackageReference",
