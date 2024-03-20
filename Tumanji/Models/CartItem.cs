@@ -44,6 +44,16 @@
             Note = note;
             Bevanda = bevanda;
         }
+        public CartItem(Guid id)
+        {
+            ID = id;
+			PaninoID = new Guid();
+			Plus = false;
+			Panino = "";
+			Note = "";
+			Bevanda = "";
+			Prezzo = 0;
+		}
         #endregion
     }
 }

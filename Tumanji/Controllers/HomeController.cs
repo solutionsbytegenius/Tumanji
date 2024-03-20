@@ -81,6 +81,31 @@ namespace Tumanji.Controllers
             HttpContext.Session.SetString("Collection", jsonString.ToString());
             return RedirectToAction("Menu");
         }
+        
+        [HttpPost]
+        public IActionResult DeleteFromCart(Guid ID)
+        {
+            if (!String.IsNullOrEmpty(HttpContext?.Session.GetString("Collection")))
+            {
+#pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
+                var jsonStringFromSession = HttpContext.Session.GetString("Collection");
+#pragma warning restore CS8602 // Dereferenziamento di un possibile riferimento Null.
+#pragma warning disable CS8601 // Possibile assegnazione di riferimento Null.
+#pragma warning disable CS8604 // Possibile argomento di riferimento Null.
+                CartCollection = JsonConvert.DeserializeObject<CartItemCollection>(jsonStringFromSession);
+#pragma warning restore CS8604 // Possibile argomento di riferimento Null.
+#pragma warning restore CS8601 // Possibile assegnazione di riferimento Null.
+            }
+            CartItem item = CartCollection.FirstOrDefault(x => x.ID == ID);
+
+#pragma warning disable CS8602 // Dereferenziamento di un possibile riferimento Null.
+            CartCollection.Remove(item);
+#pragma warning restore CS8602 // Dereferenziamento di un possibile riferimento Null.
+            var jsonString = JsonConvert.SerializeObject(CartCollection);
+            if (jsonString == "[]") jsonString = "";
+            HttpContext.Session.SetString("Collection", jsonString.ToString());
+            return RedirectToAction("Carrello",CartCollection);
+        }
 
         [HttpGet]
         public IActionResult Login()
